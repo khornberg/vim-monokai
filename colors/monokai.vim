@@ -26,6 +26,7 @@ let pink              = { "gui": "#af5f5f", "cterm": "131"}
 let darkRed           = { "gui": "#af00ff", "cterm": "129"}
 let green             = { "gui": "#5faf5f", "cterm": "71"}
 
+let blue              = { "gui": "#1446a0", "cterm": "12"}
 let seaGreen          = { "gui": "#00875f", "cterm": "29"}
 let darkYellow        = { "gui": "#00afd7", "cterm": "38"}
 let lightGreen        = { "gui": "#5f8787", "cterm": "66"}
@@ -49,10 +50,13 @@ call s:HL('CursorLine', {}, darkGrey, 'NONE')
 call s:HL('CursorColumn', lightGrey, darkerGrey, 'NONE')
 call s:HL('ColorColumn', {}, darkGrey, 'NONE')
 call s:HL('LineNr', lightGrey, defaultBackground, 'NONE')
+call s:HL('CursorLineNr', orange, defaultBackground, 'NONE')
 call s:HL('FoldColumn', lightGrey, defaultBackground, 'NONE')
 call s:HL('VertSplit', lightGrey, defaultBackground, 'NONE')
 call s:HL('Search', darkGrey, white, 'NONE')
 call s:HL('IncSearch', darkGrey, white, 'NONE')
+call s:HL('NonText', blue, {}, 'NONE')
+call s:HL('EndOfBuffer', blue, {}, 'NONE')
 
 call s:HL('Boolean', lightPurple, {}, 'NONE')
 call s:HL('Comment', grey, {}, 'bold')
@@ -165,5 +169,3 @@ call s:HL('javascriptBlock', defaultForeground, {}, 'NONE')
 call s:HL('javascriptOperator', pink, {}, 'NONE')
 call s:HL('javascriptImport', pink, {}, 'NONE')
 call s:HL('javascriptFuncComma', defaultForeground, {}, 'NONE')
-
-highlight Comment cterm=bold gui=bold
